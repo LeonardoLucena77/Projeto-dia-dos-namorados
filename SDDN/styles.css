@@ -195,3 +195,11 @@ audio {
   outline: none;
   border-radius: 8px;
 }
+
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
