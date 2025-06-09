@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para Isabelle 💖</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="logo">Para Isabelle 🌻</a>
+      <ul>
+        <li><a href="index.html#momentos">Momentos</a></li>
+        <li><a href="historia.html">Nossa História</a></li>
+        <li><a href="playlist.html">Playlist</a></li>
+        <li><a href="index.html#mensagem">Mensagem</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="overlay">
+      <h2>Estamos juntos desde:</h2>
+      <div id="timer" class="timer"></div>
+      <p class="since-text">04/01/2025 às 16:38 💖</p>
+    </div>
+  </section>
+
+  <section id="momentos" class="section">
+    <h2>📸 Nossos Momentos</h2>
+    <div class="gallery">
+      <img src="fotos/foto1.jpg" alt="Momento 1">
+      <img src="fotos/foto2.jpg" alt="Momento 2">
+      <img src="fotos/foto3.jpg" alt="Momento 3">
+    </div>
+  </section>
+
+  <section id="mensagem" class="section love-message">
+    <h2>💌 Uma Mensagem Para Você</h2>
+    <p>
+      Isabelle, você é como um girassol: cheia de luz, esperança e beleza. Ter você como minha namorada é o maior presente que a vida me deu.
+    </p>
+    <p>
+      Neste Dia dos Namorados, quero que saiba que cada segundo contigo é especial.
+    </p>
+    <p>
+      Te amo infinitamente. 💖<br>
+      <strong>Para sempre seu 💌</strong>
+    </p>
+  </section>
+
+  <footer>
+    <p>Feito por: Leo / Para: Bellita ❤️🌻 - 2025</p>
+  </footer>
+
+  <script>
+    function updateTimer() {
+      const startDate = new Date("2025-01-04T17:00:00");
+      const now = new Date();
+      const diff = now - startDate;
+
+      const seconds = Math.floor(diff / 1000) % 60;
+      const minutes = Math.floor(diff / (1000 * 60)) % 60;
+      const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const months = Math.floor(days / 30);
+      const remDays = days % 30;
+
+      const format = (n) => n.toString().padStart(2, '0');
+      const timerText = `
+        <span><strong>${format(months)}</strong> meses</span>
+        <span><strong>${format(remDays)}</strong> dias</span>
+        <span><strong>${format(hours)}</strong>h</span>
+        <span><strong>${format(minutes)}</strong>m</span>
+        <span><strong>${format(seconds)}</strong>s</span>
+      `;
+
+      document.getElementById("timer").innerHTML = timerText;
+    }
+
+    setInterval(updateTimer, 1000);
+    updateTimer();
+  </script>
+</body>
+</html>

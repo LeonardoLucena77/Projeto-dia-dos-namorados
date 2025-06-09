@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #fff8f6;
+  color: #4b2e2e;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #a80038;
+  color: white;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #fdd835; /* Amarelo girassol */
+}
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1503457574464-1d5e1d118343?fit=crop&w=1500&q=80') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.hero .overlay {
+  font-family: 'Great Vibes', cursive;
+  font-size: 40px;
+  background-color: rgba(255, 0, 76, 0.6);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.section {
+  padding: 6rem 2rem 3rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.section h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: #a80038;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.section p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 265px;
+  height: 265px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #f5c518;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.buttons a {
+  display: inline-block;
+  background: #ff4081;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.buttons a:hover {
+  background: #c60055;
+}
+
+.love-message {
+  background-color: #ffe6e6;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+}
+
+footer {
+  text-align: center;
+  background-color: #a80038;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+.timer {
+  font-family: 'Helvetica', cursive;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff8f6;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.timer span {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  color: #ffe6e6;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.since-text {
+  font-family: 'Great Vibes', cursive;
+  margin-top: 1rem;
+  font-size: 50px;
+  color: #ffe6e6;
+}
+
+/* 🎵 Estilo da seção de músicas (playlist) */
+.audio-player {
+  max-width: 600px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.track p {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #4b2e2e;
+}
+
+audio {
+  width: 100%;
+  outline: none;
+  border-radius: 8px;
+}
